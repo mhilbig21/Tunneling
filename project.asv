@@ -31,4 +31,4 @@ ylabel("wavefunction")
 %I'll work on making plots of the wavefunction for E < v0
 %Mckenna works on transmission coefficients
 %Russel works on E > v0
-%Mitch works on plotting wave functions
+%
