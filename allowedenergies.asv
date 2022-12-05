@@ -1,0 +1,11 @@
+%% Find allowed energies
+%Variables
+m = 1;
+hbar = 1;
+V0 = 1;
+
+E = 0:0.1:10;
+
+plot(E,sqrt(2*m*E)/hbar)
+
+l = sqrt(2m(V0-E))/hbar;
