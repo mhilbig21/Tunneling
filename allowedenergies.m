@@ -5,7 +5,9 @@ hbar = 1;
 V0 = 3;
 a = 1;
 
-E = 0:0.1:2;
+%Energy must be less than V0
+etau = 0.1;
+E = 0:etau:v0 - etau;
 
 
 
