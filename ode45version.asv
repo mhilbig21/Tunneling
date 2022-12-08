@@ -1,0 +1,33 @@
+% Constants: change these to sensible things
+hbar = 1;
+m = 1;
+E = 1; % get this one from "allowedenergies.m" (just read it out of the table)
+V0 = 2; % energy level of barrier
+a = 1; % width of barrier
+
+%% STEP 1: BEFORE THE BARRIER
+
+% rhs equation
+rhs_b = @(x,u)[u(2); -2*m*E./hbar^2 * u(1)];
+
+% choose initial condition based on energy the particle has before the
+% barrier:
+% basically, this is the value of the function at some point to the left of
+% the barrier. 
+% make the derivative initial condition zero if you choose a max
+% fix to be more accurate later. 
+u0_b = [0.5, 0];
+% place xfinal a little bit after the barrier starts
+% barrier starts at 0 - a, so:
+xfinal_b = -1*a+0.5;
+% before barrier solution
+[x_b, u_b] = ode45(rhs_b,[])
+
+% after the barrier, this part is the same as before the barrier
+
+% initial conditions
+% this is where things get tricky
+
+
+
+
